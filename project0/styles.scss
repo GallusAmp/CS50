@@ -1,0 +1,38 @@
+$color: blue;
+
+@media (max-width: 600px) {
+  .top {
+    display: none;
+  }
+}
+
+body {
+  background-color: darkgrey;
+  font-family: calibri, sans-serif;
+}
+
+table, tr, th, td {
+  text-align: center;
+  border: 3px solid black;
+  border-collapse: collapse;
+}
+
+.top {
+  background-color: black;
+}
+
+#info {
+  font-style: italic;
+}
+
+.row {
+  background-color: lightgrey;
+}
+
+ul {
+  color: $color;
+}
+
+ol {
+  color: $color;
+}
