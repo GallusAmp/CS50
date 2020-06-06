@@ -1,8 +1,11 @@
+$color: red;
+
 @media (max-width: 600px) {
   .top {
     display: none;
   }
 }
+
 body {
   background-color: darkgrey;
   font-family: calibri, sans-serif;
@@ -27,37 +30,43 @@ table, tr, th, td {
 }
 
 ol {
-  text-color: red;
+  text-color: $color;
 }
 
 ul {
-  text-color: red;
+  text-color: $color;
 }
 
-div p {
-  padding: 5px;
-  font-weight: bold;
-}
-div h2 {
-  text-emphasis-color: magenta;
+div {
+  p {
+    padding: 5px;
+    font-weight: bold;
+  }
+  h2 {
+    text-emphasis-color: magenta;
+  }
 }
 
-.warning, .error, .success, .message {
+%message-shared {
   border: 1px solid #ccc;
   padding: 10px;
   color: #333;
 }
+.message {
+  @extend %message-shared;
+}
 
 .success {
+  @extend %message-shared;
   border-color: green;
 }
 
 .error {
+  @extend %message-shared;
   border-color: red;
 }
 
 .warning {
+  @extend %message-shared;
   border-color: yellow;
 }
-
-/*# sourceMappingURL=styles.css.map */
